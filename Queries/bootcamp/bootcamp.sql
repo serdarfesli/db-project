@@ -14,3 +14,5 @@ select MANAGER_ID,avg(SALARY) from EMPLOYEES group by MANAGER_ID;
 select avg(SALARY) from EMPLOYEES;
 select FIRST_NAME,SALARY from EMPLOYEES where SALARY <(select avg(SALARY) from EMPLOYEES);
 select FIRST_NAME,SALARY from EMPLOYEES order by SALARY desc
+
+create view realEmail as select FIRST_NAME||' . '||EMPLOYEES.LAST_NAME as "email" from EMPLOYEES;
